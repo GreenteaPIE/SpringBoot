@@ -14,13 +14,13 @@ public class BoardController {
     private BoardService boardService;
 
     @GetMapping("/board/write")
-    public String boardWriteFormat(){
+    public String boardWriteFormat() {
 
         return "boardwrite";
     }
 
     @PostMapping("/board/writepro")
-    public String boardWritePro(Board board){
+    public String boardWritePro(Board board) {
 
         boardService.write(board);
 
