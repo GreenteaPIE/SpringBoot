@@ -9,7 +9,7 @@ public class GameController {
 
     private int targetNumber = (int) (Math.random() * 100);
 
-    @GetMapping("/")
+    @GetMapping("/game")
     public String game(Model model) {
         model.addAttribute("message", "1부터 100 사이의 숫자를 추측해보세요.");
         return "game";
