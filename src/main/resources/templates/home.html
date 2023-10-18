@@ -1,13 +1,22 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html>
 <head>
     <meta charset="UTF-8">
-    <title>홈</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>네이버 지도</title>
+    <script type="text/javascript" src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=YOUR_CLIENT_ID"></script>
 </head>
 <body>
-<div th:replace="layout/main-layout :: content">
-    <h2>우리 집 밥상에 오신 걸 환영합니다!</h2>
-    <!-- 나머지 홈 페이지 콘텐츠를 여기에 추가하세요. -->
-</div>
+<div id="map" style="width:100%;height:400px;"></div>
+
+<script>
+    var mapOptions = {
+        center: new naver.maps.LatLng(37.3595704, 127.105399),
+        zoom: 10
+    };
+
+    var map = new naver.maps.Map('map', mapOptions);
+</script>
 </body>
 </html>
