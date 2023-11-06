@@ -11,4 +11,10 @@ public class ChooseController {
 
         return "home";
     }
+
+    @GetMapping("/letter")
+    public String Letter() {
+
+        return "letter";
+    }
 }
