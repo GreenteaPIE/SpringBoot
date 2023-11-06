@@ -9,7 +9,7 @@ public class ChooseController {
     @GetMapping("/")
     public String Choose() {
 
-        return "home";
+        return "index";
     }
 
     @GetMapping("/letter")
