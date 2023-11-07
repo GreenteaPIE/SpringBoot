@@ -1,59 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>code</title>
+    <title>100일 축하</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <style>
-        body {
-            background: linear-gradient(to right, hotpink, pink);
-            font-family: 'Gaegu', cursive;
-            text-align: center;
-            padding: 20px 0;
-            color: white;
-            position: relative;
-        }
-        .letter {
-            position: relative;
-            background: rgba(255, 255, 255, 0.8);
-            margin: 50px auto;
-            padding: 20px;
-            max-width: 600px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-        }
-        h1, p {
-            color: black;
-            text-shadow: none;
-        }
-        h1 {
-            font-size: 2em;
-            margin: 20px 0;
-        }
-        p {
-            font-size: 1.2em;
-            margin: 10px 0;
-            line-height: 1.6;
-            text-align: left;
-        }
-    pre {
-        color: #000000; /* HTML 코드 색상 */
-        /* 기존 스타일 */
-        white-space: pre-wrap;       /* Since CSS 2.1 */
-        white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
-        white-space: -pre-wrap;      /* Opera 4-6 */
-        white-space: -o-pre-wrap;    /* Opera 7 */
-        word-wrap: break-word;       /* Internet Explorer 5.5+ */
-    }
-    </style>
-</head>
-<body>
-<div class="letter">
-    <pre>
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-    &lt;title&gt;100일 축하&lt;/title&gt;
-    &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"&gt;&lt;/script&gt;
-    &lt;style&gt;
         body {
             background: linear-gradient(to right, hotpink, pink);
             font-family: 'Gaegu', cursive;
@@ -99,55 +49,62 @@
         a{
             text-decoration-line: none;
         }
-    &lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;div class="celebration-text"&gt;
-        &lt;p id="rainbow1" style="font-size: 80px"&gt;경&lt;/p&gt;&lt;p style="font-size: 50px"&gt;    이규동 ♥ 임수빈    &lt;/p&gt;&lt;p id="rainbow2" style="font-size: 80px"&gt;축&lt;/p&gt;
-        &lt;h1&gt;🎉2023.11.11 / 우리가 벌써 만난지 100일이야🎉&lt;/h1&gt;
-        &lt;p&gt;😘😘😘마니 마니 사랑함니덩😘😘😘&lt;/p&gt;
-
-        &lt;div class="celebration-buttons"&gt;
-            &lt;a href="letter.html"&gt;
-            &lt;button type="button"&gt;
-                &lt;img src="images/dog1.png" alt="Celebration Image"&gt;
-                &lt;span&gt;Letter&lt;/span&gt;
-            &lt;/button&gt;
-            &lt;/a&gt;
-            &lt;button type="button"&gt;
-                &lt;img src="images/dog2.png" alt="Celebration Image"&gt;
-                &lt;span&gt;Gift&lt;/span&gt;
-            &lt;/button&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class="code-display" style="position: fixed; bottom: 0; width: 100%; text-align: center; margin-top: 10px"&gt;
-        &lt;a href="code.html"&gt;이 페이지의 코드는 어떻게 만들어져있을까?&lt;/a&gt;
-    &lt;/div&gt;
-
-    &lt;script&gt;
-        $(document).ready(function() {
-            var colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
-            var idx = 0;
-            setInterval(function() {
-                $('#rainbow1, #rainbow2').css("color", colors[idx]);
-                $('#rainbow1, #rainbow2').animate({
-                    'opacity': '0'
-                }, 500, function() {
-                    $(this).animate({
-                        'opacity': '1'
-                    }, 500);
-                });
-                idx = (idx + 1) % colors.length;
-            }, 1000);
-
-            $(".celebration-buttons button:nth-child(2)").click(function() {
-                alert("선물은 나야! 뭘 기대한건데? 내가 젤 큰 선물이자나 푸하핳");
-            });
-        });
-    &lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-    </pre>
+    </style>
+</head>
+<body>
+<div class="celebration-text">
+    <p id="rainbow1" style="font-size: 80px">경</p><p style="font-size: 50px">    이규동 ♥ 임수빈    </p><p id="rainbow2" style="font-size: 80px">축</p>
+    <h1>🎉2023.11.11 / 우리가 벌써 만난지 100일이야🎉</h1>
+    <p>😘😘😘마니 마니 사랑함니덩😘😘😘</p>
+    <img id="image1" src="ddu1.png" style="position: absolute; top: 0; left: 0; width: 200px;">
+    <img id="image2" src="ddu2.png" style="position: absolute; top: 0; left: 0; display: none; width: 200px;">
+    <div class="celebration-buttons">
+        <a href="letter.html">
+        <button type="button">
+            <img src="dog1.png" alt="Celebration Image">
+            <span>Letter</span>
+        </button>
+        </a>
+        <button type="button">
+            <img src="dog2.png" alt="Celebration Image">
+            <span>Gift</span>
+        </button>
+    </div>
 </div>
+<div class="code-display" style="position: fixed; bottom: 0; width: 100%; text-align: center; margin-top: 10px">
+    <a href="code.html">이 페이지의 코드는 어떻게 만들어져있을까?</a>
+</div>
+<script>
+    $(document).ready(function() {
+        var colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
+        var idx = 0;
+        setInterval(function() {
+            $('#rainbow1, #rainbow2').css("color", colors[idx]);
+            $('#rainbow1, #rainbow2').animate({
+                'opacity': '0'
+            }, 500, function() {
+                $(this).animate({
+                    'opacity': '1'
+                }, 500);
+            });
+            idx = (idx + 1) % colors.length;
+        }, 1000);
+        var toggle = false;
+        setInterval(function() {
+            if (toggle) {
+                $("#image1").hide();
+                $("#image2").show();
+            } else {
+                $("#image2").hide();
+                $("#image1").show();
+            }
+            toggle = !toggle;
+        }, 500);  
+    });
+            $(".celebration-buttons button:nth-child(2)").click(function() {
+            alert("선물은 나야! 뭘 기대한건데? 내가 젤 큰 선물이자나 푸하핳");
+        });
+    });
+</script>
 </body>
 </html>
